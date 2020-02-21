@@ -7,7 +7,5 @@ RUN apt-get update \
   && add-apt-repository -y ppa:savoury1/apt-xenial \
   && add-apt-repository -y ppa:savoury1/gpg \
   && apt-get update \
-  && apt-get upgrade -y \
-  && apt-get dist-upgrade -y \
   && apt-get install -y gnupg2
 
