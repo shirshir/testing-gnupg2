@@ -1,0 +1,5 @@
+name: 'Testing GnuPG2'
+description: 'Test the installation of GnuPG2'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
