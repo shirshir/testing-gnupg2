@@ -3,12 +3,11 @@ name: Docker Image CI
 on: [push]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag gnupg2test:$(date +%s)
+      run: docker build . --file Dockerfile --tag gnupg2test
+    - name: Get the version
+      run: docker run -it --rm gnupg2test gpg2 --version
